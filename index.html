@@ -41,9 +41,12 @@
     ]
 
     // Add your code here
-for (i = 0; i < phonebook.lenght; i++) {
-    return phonebook;
-  };
+    for (let i = 0; i < phonebook.length; i++) {
+      if (phonebook[i].name === name) {
+        para.textContent = `${name}'s phone number is ${phonebook[i].number}.`;
+        break;
+      }
+    }
     // Don't edit the code below here!
     const section = document.querySelector('section');
     section.appendChild(para);
